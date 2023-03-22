@@ -13,7 +13,7 @@ export class ProductsResultsComponent implements AfterViewInit, OnDestroy{
 
   products: Product[] = [];
   cantidadPost : number = 0;
-  elementosPorPagina : number = 20 ;
+  elementosPorPagina : number = 21 ;
 
   subscriptions = {
     keywordChanged: new Subscription()
@@ -54,7 +54,7 @@ export class ProductsResultsComponent implements AfterViewInit, OnDestroy{
         this.products = []
         products.forEach(product => {
           this.products.push({
-            id: product.id,
+            id: product._id,
             name: product.name,
             price: product.price,
             brand: product.brand,

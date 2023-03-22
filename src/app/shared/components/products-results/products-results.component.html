@@ -3,25 +3,6 @@
 
 <div class="max-w-7xl">
   <div class="flex justify-center flex-wrap">
-
-    <div class="spinner">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <label class="label">
-      <div class="toggle">
-          <input class="toggle-state" type="checkbox" name="check" value="check">
-          <div class="indicator"></div>
-      </div>
-  </label>
-
     <app-card *ngFor="let card of products"
       class="mx-2 my-2 shadow-lg hover:shadow-2xl rounded-md "
       [id]="card.id"

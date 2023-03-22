@@ -1,3 +1,4 @@
+import { MaterialModule } from './../../material-components/material/material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InfoBarComponent } from './info-bar/info-bar.component';
@@ -6,11 +7,13 @@ import {LayoutModule} from '@angular/cdk/layout';
 import { TranslateModule } from '@ngx-translate/core';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { InputSearchComponent } from './input-search/input-search.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CardsGroupComponent } from './cards-group/cards-group.component';
 import { CardComponent } from './card/card.component';
 import { ProductsResultsComponent } from './products-results/products-results.component';
 import { PaginatorComponent } from './paginator/paginator.component';
+import { CardInputComponent } from './card-input/card-input.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +23,18 @@ import { PaginatorComponent } from './paginator/paginator.component';
     CardsGroupComponent,
     CardComponent,
     ProductsResultsComponent,
-    PaginatorComponent
+    PaginatorComponent,
+    CardInputComponent,
+    ToolbarComponent
   ],
   imports: [
     CommonModule,
     CdkMenuModule,
     TranslateModule,
     LayoutModule,
+    ReactiveFormsModule,
+    MaterialModule,
+    FormsModule,
     ReactiveFormsModule
   ],
   exports:[
@@ -36,7 +44,8 @@ import { PaginatorComponent } from './paginator/paginator.component';
     CardsGroupComponent,
     CardComponent,
     ProductsResultsComponent,
-    PaginatorComponent
+    PaginatorComponent,
+    ToolbarComponent
   ]
 })
 export class ComponentsModule { }
